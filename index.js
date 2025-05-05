@@ -1,5 +1,8 @@
 const { Client, GatewayIntentBits } = require("discord.js");
 require("dotenv").config();
+const express = require('express')
+const app = express()
+const port = process.env.PORT || 4000 
 
 const client = new Client({
     intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent],
